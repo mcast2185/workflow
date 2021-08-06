@@ -217,10 +217,4 @@
 //         console.log(err)
 //     })
 
-const newone = (x) => {
-    return function op(y){
-        return x + y;
-    }
-}
-const open = newone(5)
-console.log(open(4))
+

@@ -281,50 +281,50 @@ const ver = _.VERSION
 // NuProm
 //     .then(data => console.log(data));
 
-const samplePromise = new Promise((resolve, reject) => {
-    setInterval(() => {
-        let content = 17;
-        if (content > 10){
-            return resolve('content is above threshold');
-        } else {
-            return reject(`Error, content was at: ${content}`);
-        };
-    }, 2000);
-});
+// const samplePromise = new Promise((resolve, reject) => {
+//     setInterval(() => {
+//         let content = 17;
+//         if (content > 10){
+//             return resolve('content is above threshold');
+//         } else {
+//             return reject(`Error, content was at: ${content}`);
+//         };
+//     }, 2000);
+// });
 
-const promiseTwo = new Promise((resolve, reject) => {
-    setInterval(() => {
-        let cont = 15;
-        if (cont > 16){
-            return resolve('proceed');
-        } else {
-            return reject(`Error, ${cont} is just below`);
-        }
-    }, 4000);
-});
+// const promiseTwo = new Promise((resolve, reject) => {
+//     setInterval(() => {
+//         let cont = 15;
+//         if (cont > 16){
+//             return resolve('proceed');
+//         } else {
+//             return reject(`Error, ${cont} is just below`);
+//         }
+//     }, 4000);
+// });
 
-async function newFunc(samplePromise, promiseTwo){
-    const newSample = await samplePromise;
-    console.log(newSample);
-    const newTwo = await promiseTwo;
-    console.log(newTwo);
-}
-newFunc(samplePromise, promiseTwo);
+// async function newFunc(samplePromise, promiseTwo){
+//     const newSample = await samplePromise;
+//     console.log(newSample);
+//     const newTwo = await promiseTwo;
+//     console.log(newTwo);
+// }
+// newFunc(samplePromise, promiseTwo);
 
-class NewError extends Error{
-    constructor(msg= "Error here", ...params){
-        super(...params);
-        this.msg = msg;
-    }
-};
+// class NewError extends Error{
+//     constructor(msg= "Error here", ...params){
+//         super(...params);
+//         this.msg = msg;
+//     }
+// };
 
-const hov = () => {
-    let one = 1;
-    if (one == 1){
-        return 'we are good here';
-    } else {
-        throw new NewError(this.msg, 'error in msg')
-    }
-}
+// const hov = () => {
+//     let one = 1;
+//     if (one == 1){
+//         return 'we are good here';
+//     } else {
+//         throw new NewError(this.msg, 'error in msg')
+//     }
+// }
 
-console.log(hov());
+// console.log(hov());

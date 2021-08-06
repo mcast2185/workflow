@@ -217,12 +217,33 @@
 //         console.log(err)
 //     })
 
-// const newone = (x) => {
-//     return function op(y){
-//         return x + y;
+// #15
+// here we use the power of our bind method to tie up the functions return with
+// the information nested in our variable. this also avoids the necessity of 
+// any arguments in the function
+
+// const character = {
+//     first: 'Rick',
+//     last: 'Sanchez'
+// };
+// function fullName(){
+//     return `${this.first} ${this.last}`
+// };
+// const rick = fullName.bind(character);
+// console.log(rick());
+
+// #16
+// here we simply work with class objects that allow for content to be
+// passed and used within its construct.
+
+// class Example{
+//     constructor({title, content}){
+//         this.title = title;
+//         this.content = content;
 //     }
-// }
-// const open = newone(5)
-// console.log(open(4))
-
-
+//     details(){
+//         return `${this.title} is about ${this.content}`
+//     }
+// };
+// const inst = new Example({title: 'ruins', content: 'a dystopia'})
+// console.log(inst.details());
